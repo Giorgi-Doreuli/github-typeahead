@@ -48,7 +48,7 @@ function SearchBox() {
               setSpinner(true);
               const timer = setTimeout(() => {
               getSearchedProfile(searchValue);
-            }, 2200);
+            }, 3000);
         
             return () => clearTimeout(timer);
         }
@@ -58,7 +58,7 @@ function SearchBox() {
           const timer2 = setTimeout(() => {
             getPoPularProfile();                      
             setShow(false);
-          }, 2200);
+          }, 3000);
 
           return () => clearTimeout(timer2);
         }
