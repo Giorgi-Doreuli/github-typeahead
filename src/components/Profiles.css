@@ -1,0 +1,146 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+
+.profiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.list{
+    position: relative;
+    height: 100%;
+    text-decoration: none;
+    overflow: hidden;
+    animation: transitionIn 1.5s;
+    color: crimson;
+}
+
+.card_overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);
+    background-color: #24292f;     
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+
+.list:hover .card_overlay {
+    transform: translateY(0);
+}
+
+.card_header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    border-radius: calc(var(--curve) * 0.8px) calc(var(--curve) * 0.8px) 0 0;
+    background-color: #24292f;
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+
+.list:hover .card_header {
+    transform: translateY(0);
+  }
+
+  @keyframes transitionIn {
+    from{
+      opacity: 0;
+      transform: rotateX(-10deg);
+    }
+
+    to{
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+
+  
+.card_title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: crimson;
+}
+
+  .icon{
+    align-items: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .card {
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 270px;
+    border-radius: 10px 10px 35px 35px;
+    box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+    background: #151515;
+    overflow: hidden;
+  }
+
+    .ds-top {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 300px;
+      height: 80px;
+      background: crimson;
+    }
+    .avatar-holder {
+      position: absolute;
+      margin: auto;
+      top: 5px;
+      right: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px #151515,
+                  inset 0 0 0 5px #000000,
+                  inset 0 0 0 5px #000000,
+                  inset 0 0 0 5px #000000,
+                  inset 0 0 0 5px #000000,;
+      background: white;
+      overflow: hidden;
+    }
+      .avatars {
+        height: 200px;
+      }
+    .name {
+      position: absolute;
+      margin: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: inherit;
+      height: 40px;
+      text-align: center;
+    }
+      .card_title {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+      }
