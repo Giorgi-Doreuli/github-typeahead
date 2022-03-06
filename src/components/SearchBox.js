@@ -16,11 +16,7 @@ function SearchBox() {
     useEffect(() => {
 	  	const getSearchedProfile = async (searchValue) => {
             const api_url = 'https://api.github.com/search/users?q='+searchValue+'+in:login&per_page=10';
-            const fetchProfile = await fetch(api_url,{
-                headers: {
-                  Authorization: `token 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 ` 
-                }
-              });
+            const fetchProfile = await fetch(api_url);
             const profile = await fetchProfile.json();            
             setProfiles(profile.items);
             setSpinner(false);
@@ -32,11 +28,7 @@ function SearchBox() {
 
         const getPoPularProfile = async () => {
             const api_url = 'https://api.github.com/search/users?q=repos:%3E800+followers:%3E1000&page=1&per_page=10';
-            const fetchProfile = await fetch(api_url,{
-                headers: {
-                  Authorization: `token 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 ` 
-                }
-              });
+            const fetchProfile = await fetch(api_url);
             const profile = await fetchProfile.json();
                 setProfiles(profile.items);                
                 setSpinner(false);
