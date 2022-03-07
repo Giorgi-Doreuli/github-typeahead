@@ -28,6 +28,10 @@
     width: 100%;
 }
 
+img{
+  animation: transitionIn1.5s;
+}
+
 .card_overlay{
     position: absolute;
     bottom: 0;
@@ -147,8 +151,3 @@
         font-size: 18px;
       }
 
-      @media only screen and (max-device-width: 480px) {
-        .profiles{
-          width: 500px;
-        }
-      }
