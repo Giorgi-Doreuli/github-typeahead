@@ -144,3 +144,9 @@
         font-weight: 700;
         font-size: 18px;
       }
+
+      @media only screen and (max-width: 768px) {
+          .profiles{
+            width: 100%;
+          }
+      }
