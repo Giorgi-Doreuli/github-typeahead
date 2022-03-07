@@ -60,7 +60,7 @@ function SearchBox() {
   
 
     return (
-      <div className='fullPage' content="width=1000">
+      <div className='fullPage' content="width=1000, initial-scale=1.0">
           <div className='searchBar'>
             <Navbar />           
                   <div className="container">
