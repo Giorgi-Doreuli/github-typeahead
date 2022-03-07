@@ -4,11 +4,14 @@ import './Profiles.css'
 function Profiles(props) {
   const searchValueLength = props.searchValue.length;
 
+  /* its like autosuggestion, when user hovers over profile, their name is autofinished in search bar */
+
   const setHoverValue = (profileName) =>{
     const slicedValue = profileName.slice(searchValueLength);
     props.setHoverValue(slicedValue);
   }
 
+  /* open github profile when user clicks icon */
   const openInNewTab = (githubPageProfile) => {
       const url = 'https://github.com/' + githubPageProfile;
       const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -17,7 +20,7 @@ function Profiles(props) {
     const setSearchValue = (searchValue) =>{
       props.setSearchValue(searchValue);
     }
-
+/*when user click on profile, it finishes search value in search bar and  fetches data depend on search value*/
     const setSearchValueAndNewTab = (searchValue) =>{
       props.setSearchValue(searchValue);
       openInNewTab(searchValue);

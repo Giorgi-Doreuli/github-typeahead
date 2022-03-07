@@ -14,7 +14,11 @@ function SearchBox() {
 
 
     useEffect(() => {
+      /*if noone was found by searchvalue, shows noone found text*/
+
       setNoOneFound(false);
+
+      /* fetch data from api depend on what user types and while doing it, stops loading spinner after data is fetched*/
 	  	const getSearchedProfile = async (searchValue) => {
             const api_url = 'https://api.github.com/search/users?q='+searchValue+'+in:login&per_page=10';
             const fetchProfile = await fetch(api_url);
@@ -28,6 +32,7 @@ function SearchBox() {
             
         }
 
+        /* fetches and renders popular github profiles automaticly, before user types something*/
         const getPoPularProfile = async () => {
             const api_url = 'https://api.github.com/search/users?q=repos:%3E800+followers:%3E1000&page=1&per_page=10';
             const fetchProfile = await fetch(api_url);
@@ -36,7 +41,9 @@ function SearchBox() {
                 setSpinner(false);
         }
 
-        
+    
+        /* if user types something, loading  spinner appears and waits 3 second 
+          (because of api limit, thats why using api token is better option) to call function that fetches data*/
         if(searchValue !== ''){              
               setShow(true);
               setSpinner(true);
