@@ -3,15 +3,16 @@
     padding: 0;
   }
 
-  body{
-    
+body{
     background-color: white;
-  }
-
-.profilesList{
-  width: 100%;
+    width: 100%;
 }
-  
+
+
+.fullPage{
+  position: relative;
+  text-align: center;
+}
 
 .popular-text{
     color: black;
@@ -26,10 +27,7 @@
 .searchBar{
     text-align: center;
     z-index: 99;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
   #spinner{
@@ -188,4 +186,15 @@
   height: 20vw;
   color: black;
   font-size: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  .popular-text{
+    width: 500px;
+  }
+ 
+  #spinner{
+    margin-left: 220px;
+  }
+
 }

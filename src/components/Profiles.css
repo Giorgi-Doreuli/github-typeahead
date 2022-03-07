@@ -13,6 +13,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+    position: relative;
+    text-align: center;
 }
 
 
@@ -145,8 +147,8 @@
         font-size: 18px;
       }
 
-      @media only screen and (max-width: 768px) {
-          .profiles{
-            width: 100%;
-          }
+      @media only screen and (max-device-width: 480px) {
+        .profiles{
+          width: 500px;
+        }
       }
