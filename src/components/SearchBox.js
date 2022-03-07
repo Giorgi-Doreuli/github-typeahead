@@ -63,7 +63,7 @@ function SearchBox() {
       <div className='fullPage'>
           <div className='searchBar'>
             <Navbar />           
-                  <div classNsame="container">
+                  <div className="container">
                     <input type="text" onChange={(event) => setSearchValue(event.target.value)} 
                           placeholder='Enter name' 
                           value={finalSearchValue} 

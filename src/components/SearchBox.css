@@ -4,15 +4,9 @@
   }
 
 body{
-    background-color: white;
-    width: 100%;
-}
+    background-color: white;}
 
 
-.fullPage{
-  position: relative;
-  text-align: center;
-}
 
 .popular-text{
     color: black;
@@ -27,7 +21,6 @@ body{
 .searchBar{
     text-align: center;
     z-index: 99;
-    position: relative;
 }
 
   #spinner{
