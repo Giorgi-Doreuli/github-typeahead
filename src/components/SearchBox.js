@@ -82,7 +82,11 @@ function SearchBox() {
                     {show ? <div className='space'></div> : <h2 className='popular-text'>Popular github users</h2>}
                   </div>
             <div>
-              {noOneFound ? <h2 className='noOnefound'>Your search - <b style={{color : 'red'}}>{searchValue}</b>- did not match any Profiles.</h2> : ''}
+              {noOneFound ? <div className='noOnefound'>
+                                <h2>Your search </h2>
+                                <b style={{color : 'red'}}>-{searchValue}-</b>
+                                <h2>did not match any Profiles.</h2>
+                            </div> : ''}
             </div>
           <div className='profilesList'>
           {spinner1 ? <div id="spinner"></div> : <Profiles  showProfiles={profiles}

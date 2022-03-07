@@ -184,8 +184,17 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vw;
   color: black;
   font-size: 20px;
+}
+
+b{
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 780px) {
+  .noOnefound{
+    flex-direction: column;
+  }
 }
 
