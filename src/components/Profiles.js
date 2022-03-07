@@ -14,10 +14,13 @@ function Profiles(props) {
       const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
       if (newWindow) newWindow.opener = null
   } 
-
-
     const setSearchValue = (searchValue) =>{
-        props.setSearchValue(searchValue);
+      props.setSearchValue(searchValue);
+    }
+
+    const setSearchValueAndNewTab = (searchValue) =>{
+      props.setSearchValue(searchValue);
+      openInNewTab(searchValue);
     }
 
   return (
@@ -41,7 +44,7 @@ function Profiles(props) {
                                 <h2 className="card_title">{profiles.login}</h2>
                               </div>
                             </div>
-                              <i className="fab fa-github fa-2x icon" onClick={() => {openInNewTab(props.searchValue)}}></i>
+                              <i className="fab fa-github fa-2x icon" onClick={() => setSearchValueAndNewTab(profiles.login)}></i>
                             </div>
                           </div>
                 </div>
