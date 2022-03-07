@@ -14,6 +14,7 @@ function SearchBox() {
 
 
     useEffect(() => {
+      setNoOneFound(false);
 	  	const getSearchedProfile = async (searchValue) => {
             const api_url = 'https://api.github.com/search/users?q='+searchValue+'+in:login&per_page=10';
             const fetchProfile = await fetch(api_url);
@@ -24,6 +25,7 @@ function SearchBox() {
             if(profile.items.length === 0){
               setNoOneFound(true);
             }
+            
         }
 
         const getPoPularProfile = async () => {
@@ -72,10 +74,10 @@ function SearchBox() {
                   </div>
                     {show ? <div className='space'></div> : <h2 className='popular-text'>Popular github users</h2>}
                   </div>
-          <div className='profilesList'>
             <div>
               {noOneFound ? <h2 className='noOnefound'>Your search - <b style={{color : 'red'}}>{searchValue}</b>- did not match any Profiles.</h2> : ''}
             </div>
+          <div className='profilesList'>
           {spinner1 ? <div id="spinner"></div> : <Profiles  showProfiles={profiles}
                                                             setHoverValue={setHoverValue} 
                                                             searchValue={searchValue}

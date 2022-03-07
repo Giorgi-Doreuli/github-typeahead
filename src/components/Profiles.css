@@ -13,8 +13,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    position: relative;
     text-align: center;
+    width : 100%;
 }
 
 
@@ -25,6 +25,7 @@
     overflow: hidden;
     animation: transitionIn 1.5s;
     color: crimson;
+    width: 100%;
 }
 
 .card_overlay{
@@ -87,7 +88,6 @@
   }
 
   .card {
-    margin: auto;
     top: 0;
     right: 0;
     bottom: 0;

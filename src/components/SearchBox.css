@@ -15,12 +15,13 @@ body{
 
 .space{
   height: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .searchBar{
     text-align: center;
     z-index: 99;
+
 }
 
   #spinner{
@@ -46,14 +47,21 @@ body{
     }
   }
 
+  .profilesList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container {
-    position: relative;;
+    position: relative;
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 500px;
+    width: 100%;
     height: 100px;
     margin: 50px auto 0px;
   }
@@ -181,13 +189,3 @@ body{
   font-size: 20px;
 }
 
-@media only screen and (max-width: 480px) {
-  .popular-text{
-    width: 500px;
-  }
- 
-  #spinner{
-    margin-left: 220px;
-  }
-
-}
